@@ -213,7 +213,7 @@ class AWSCredentials(object):
 
         # quote path for +, ~, and spaces
         # see bugs.launchpad.net #1003633 and #1086997
-        scheme = 'https'
+        scheme = 'http'
         host = 's3.{}.amazonaws.com'.format(self.region)
         bucket = uri_parsed.netloc
         path = '/{}{}'.format(bucket, self._quote(uri_parsed.path, '+~ '))
